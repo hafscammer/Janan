@@ -1,0 +1,667 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fff5f7;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation - Desktop */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 245, 247, 0.95);
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+body.dark-mode header {
+    background-color: rgba(30, 30, 30, 0.95);
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode nav a {
+    color: #f0f0f0;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #e91e63;
+    color: white;
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Section */
+.main-section {
+    /* background: linear-gradient(135deg, #fff5f7 0%, #ffeef2 100%); */
+    text-align: center;
+}
+
+body.dark-mode .main-section {
+    background: linear-gradient(135deg, #2a1a2a 0%, #1a1a2a 100%);
+}
+
+.main-heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
+    color: #e91e63;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.urdu-poetry {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .urdu-poetry {
+    color: #f0f0f0;
+}
+
+.english-translation {
+    font-style: italic;
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.dark-mode .english-translation {
+    color: #aaa;
+}
+
+/* Other Sections */
+.section-heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #e91e63;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.chat-question {
+    font-size: 1.8rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .chat-question {
+    color: #f0f0f0;
+    background-color: rgba(40, 40, 40, 0.8);
+}
+
+.section-poetry {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.8rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .section-poetry {
+    color: #f0f0f0;
+    background-color: rgba(40, 40, 40, 0.7);
+}
+
+/* Section Colors */
+.section-1 {
+    background: linear-gradient(135deg, #ffeef2 0%, #fce4ec 100%);
+}
+
+body.dark-mode .section-1 {
+    background: linear-gradient(135deg, #2a1a2a 0%, #2a1a25 100%);
+}
+
+.section-2 {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+}
+
+body.dark-mode .section-2 {
+    background: linear-gradient(135deg, #2a1a25 0%, #2a1a20 100%);
+}
+
+.section-3 {
+    background: linear-gradient(135deg, #f8bbd9 0%, #f48fb1 100%);
+}
+
+body.dark-mode .section-3 {
+    background: linear-gradient(135deg, #2a1a20 0%, #2a1a1a 100%);
+}
+
+/* Flower Animations */
+.flower {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.pink-flower {
+    color: #f48fb1;
+}
+
+.black-flower {
+    color: #333;
+}
+
+body.dark-mode .black-flower {
+    color: #f0f0f0;
+}
+
+.white-flower {
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Petal Falling Animation */
+.petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 0 20px 0 20px;
+    opacity: 0.7;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.heart {
+    color: #e91e63;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Control Buttons */
+.control-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-btn {
+    background: #e91e63;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+}
+
+#newQuoteBtn {
+    position: fixed;
+    bottom: 100px;
+    left: 20px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#newQuoteBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+}
+
+/* Animations */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================= */
+/* RESPONSIVE DESIGN FOR MOBILE DEVICES */
+/* ============================================= */
+
+/* Tablet Devices (768px and below) */
+@media (max-width: 768px) {
+    .main-section {
+        padding-top: 160px;
+    }
+    .section-1 {
+        margin-top: 120px;
+    }
+    .section-2 {
+        margin-top: 120px;
+    }
+    .section-3 {
+        margin-top: 120px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    .main-heading {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .urdu-poetry {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    .chat-question {
+        font-size: 1.5rem;
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .section-poetry {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .english-translation {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    /* Reduce flower sizes on mobile */
+    .flower {
+        font-size: 2rem !important;
+        opacity: 0.5;
+    }
+
+    /* Adjust control buttons for mobile */
+    .control-buttons {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .control-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    #newQuoteBtn {
+        bottom: 85px;
+        left: 15px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    section {
+        padding: 80px 0;
+        min-height: auto;
+    }
+
+    .main-heading {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+    }
+
+    .urdu-poetry {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .section-heading {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .chat-question {
+        font-size: 1.2rem;
+        padding: 12px;
+        margin-bottom: 25px;
+    }
+
+    .section-poetry {
+        font-size: 1.2rem;
+        padding: 12px;
+        line-height: 1.6;
+    }
+
+    .english-translation {
+        font-size: 1rem;
+    }
+
+    /* Hide some flowers on very small screens */
+    .flower:nth-child(3),
+    .flower:nth-child(4) {
+        display: none;
+    }
+
+    .flower {
+        font-size: 1.8rem !important;
+        opacity: 0.4;
+    }
+
+    /* Make petals smaller on mobile */
+    .petal {
+        width: 15px;
+        height: 15px;
+    }
+
+    .footer-text {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust control buttons for very small screens */
+    .control-buttons {
+        bottom: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    #newQuoteBtn {
+        bottom: 70px;
+        left: 10px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile Devices (360px and below) */
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+    }
+
+    .main-heading {
+        font-size: 2.2rem;
+    }
+
+    .urdu-poetry {
+        font-size: 1.2rem;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .chat-question {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .section-poetry {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .english-translation {
+        font-size: 0.9rem;
+    }
+
+    /* Further reduce flower sizes */
+    .flower {
+        font-size: 1.5rem !important;
+    }
+
+    .control-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    #newQuoteBtn {
+        bottom: 60px;
+        padding: 7px 14px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    section {
+        padding: 60px 0;
+        min-height: 100vh;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .urdu-poetry {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .chat-question {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .section-poetry {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .english-translation {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+}
+
+/* Prevent text from being too wide on large screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+
+    .main-heading {
+        font-size: 5rem;
+    }
+
+    .urdu-poetry {
+        font-size: 2.2rem;
+        max-width: 900px;
+    }
+
+    .section-heading {
+        font-size: 4rem;
+    }
+
+    .chat-question,
+    .section-poetry {
+        max-width: 900px;
+    }
+}
